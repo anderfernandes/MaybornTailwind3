@@ -1,0 +1,26 @@
+{
+  "name": "mayborntailwind3",
+  "version": "1.0.0",
+  "description": "Mura CMS 7.1 theme using Tailwind CSS 3 and Docker for development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css": "npx tailwind -i ./tailwind.css -o ./css/styles.css",
+    "css:build": "npx tailwind -i ./tailwind.css -o ./css/styles.css",
+    "css:watch": "npx tailwind -i ./tailwind.css -o ./css/styles.css --watch"
+  },
+  "keywords": [
+    "muracms",
+    "mura",
+    "mura",
+    "theme",
+    "mura",
+    "tailwind"
+  ],
+  "author": "@anderfernandes",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss": "^3.3.5"
+  }
+}

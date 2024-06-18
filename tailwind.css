@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1.title {
+  @apply text-5xl md:text-7xl font-bold text-center text-white p-4;
+}
+
+h5.subtitle {
+  @apply text-zinc-400 text-center text-base md:text-lg;
+}
+
+.btn {
+  @apply font-medium text-sm rounded-lg px-3 py-2 flex items-center justify-center border-2 cursor-pointer;
+}
+
+.btn-lg {
+  @apply px-6 py-2 text-lg;
+}
+
+.btn-primary {
+  @apply bg-blue-950 border-blue-950 text-white disabled:opacity-35;
+}
+
+.btn-secondary {
+  @apply bg-black border-black text-white;
+}
+
+.btn-success {
+  @apply bg-green-600 border-green-600 text-white;
+}
+
+.btn-basic {
+  @apply bg-transparent text-white border-white hover:bg-white hover:text-black;
+}
+
+.astral-events-page {
+  @apply grid gap-2;
+}
+
+.astral-events-page > h3 {
+  @apply font-semibold text-lg;
+}
+
+.astral-events-container {
+  @apply flex gap-1 -mr-2 overflow-x-auto;
+}
+
+.astral-event-card {
+  @apply w-40 h-60 flex-shrink-0 cursor-pointer;
+}
+
+.astral-event-card > img {
+  height: 100%;
+  width: 100%;
+  @apply rounded-xl;
+}
+
+.astral-event-card-body {
+  @apply hidden;
+}
+
+.astral-event-back-button {
+  @apply px-3 py-2 rounded text-white font-semibold;
+}
+
+.astral-event-details-page {
+  @apply flex flex-col gap-4 p-4;
+}
+
+form > span,
+label > span {
+  @apply text-sm text-zinc-500 font-normal;
+}
+
+form > label,
+div > label {
+  @apply text-sm font-medium;
+}
+
+input,
+input::placeholder,
+textarea::placeholder {
+  @apply font-normal text-sm;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @apply cursor-pointer;
+}
