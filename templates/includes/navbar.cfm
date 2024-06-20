@@ -6,7 +6,7 @@
       </div>
       <div class="hidden md:flex grow justify-center items-center gap-3 h-full w-full">
         <cfif (FindNoCase(m.content('filename'), '/') eq 0)>
-        <a href="/" class="text-black font-medium text-sm hover:bg-blue-950 px-3 py-2 hover:text-white hover:rounded">
+        <a href="/" class="text-black font-medium text-sm hover:underline px-3 py-2 hover:underline hover:rounded">
           Home
         </a>
         <cfelse>
@@ -19,11 +19,11 @@
           <cfloop condition="i.hasNext()">
             <cfset item = i.next() />
             <cfif (FindNoCase(m.content('filename'), item.getURLTitle()) eq 0)>
-            <a href="#item.getUrl()#" class="text-black font-medium text-sm hover:bg-blue-950 px-3 py-2 hover:text-white hover:rounded">
+            <a href="#item.getUrl()#" class="text-black font-medium text-sm hover:underline px-3 py-2 hover:rounded">
               #item.getMenuTitle()#
             </a>
             <cfelse>
-            <a href="#item.getUrl()#" class="font-medium text-sm px-3 py-2 flex items-center justify-center bg-blue-950 text-white rounded">
+            <a href="#item.getUrl()#" class="font-medium text-sm px-3 py-2 flex items-center justify-center bg-blue-950 text-white rounded hover:underline">
               #item.getMenuTitle()#
             </a>
             </cfif>

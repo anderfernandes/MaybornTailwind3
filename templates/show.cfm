@@ -22,19 +22,21 @@
     </head>
     <body class="flex flex-col items-center bg-zinc-50">
       <main class="w-full min-h-screen z-30 w-full xl:max-w-screen-2xl p-6 flex flex-col gap-3 pt-16 bg-zinc-50">
-      <br />
-      <cfinclude template="includes/navbar.cfm" />
-      <a href="/shows">
-        <svg viewBox="0 0 24 24" class="w-6 h-6">
-          <path fill="currentColor" d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"></path>
-        </svg>
-      </a>
-      #$.dspBody(
-          body=$.content('body'), 
-          pageTitle='', 
-          crumbList=false, 
-          showMetaImage=false
-        )#
+        <br />
+        <cfinclude template="includes/navbar.cfm" />
+        <a href="/shows">
+          <svg viewBox="0 0 24 24" class="w-6 h-6">
+            <path fill="currentColor" d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"></path>
+          </svg>
+        </a>
+        <br />
+        #$.dspBody(
+            body=$.content('body'), 
+            pageTitle='', 
+            crumbList=false, 
+            showMetaImage=false
+          )#
+        <br />
         <cfif isNull(show) OR !isDefined("url.id")>
           <div class="bg-red-100 text-sm text-red-700 text-base rounded-lg p-3 font-medium flex justify-center items-center gap-2">
             <svg viewBox="0 0 24 24" class="h-5 w-5">
@@ -44,7 +46,7 @@
           </div>
           <cfelse>
           <div class="flex gap-3">
-            <div class="border flex-none rounded-lg w-64 h-96 mb-3" style="background-image:url('#replace(show.cover, "http", "https")#') !important;background-size:cover !important"></div>
+            <div class="border flex-none rounded-lg w-64 h-96 mb-3 bg-center bg-cover" style="background-image:url('/sites/#$.siteConfig('siteId')#/assets/Image/covers/#show.id#.jpg')"></div>
             <div class="flex flex-col gap-3">
               <h5 class="text-sm text-zinc-400">Show ###show.id#</h5>
               <h1 class="font-extrabold text-3xl">#show.name#</h1>

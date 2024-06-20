@@ -14,7 +14,7 @@
   <html lang="en">
     <cfinclude template="includes/html_head.cfm" />
     <body class="flex flex-col items-center bg-zinc-50">
-      <main class="w-full h-screen z-30 w-full xl:max-w-screen-2xl p-6 flex flex-col gap-3 pt-16 bg-zinc-50">
+      <main class="w-full min-h-screen z-30 w-full xl:max-w-screen-2xl p-6 flex flex-col gap-3 pt-16 bg-zinc-50">
         <cfinclude template="includes/navbar.cfm" />
         <h1 class="font-extrabold text-3xl my-12">#$.content('title')#</h1>
         #$.dspBody(
@@ -36,7 +36,7 @@
           <section class="w-[calc(100%)]">
             <div class="flex gap-3 overflow-x-auto">
               <cfloop item="e" array="#item.events#">
-                <a href="/event?id=#e.id#" class="border hover:scale-105 flex-none rounded-lg w-64 h-96 mb-3" style="background-image:url('#replace(e.show.cover, "http", "https")#') !important;background-size:cover !important">
+                <a href="/event?id=#e.id#" class="border hover:scale-105 flex-none rounded-lg w-64 h-96 mb-3 bg-cover bg-center" style="background-image:url('/sites/#$.siteConfig('siteId')#/assets/Image/covers/#e.show.id#.jpg')">
                   <div class="flex flex-col justify-end gap-1 h-full bg-gradient-to-b from-transparent from-35% to-black rounded-b to-90% p-3">
                     <div class="flex items-center gap-1">
                       <span class="px-2 py-1 font-medium bg-white border border-black rounded-full items-center gap-1 flex items-center text-xs">

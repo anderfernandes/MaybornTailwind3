@@ -11,6 +11,45 @@
 
 <br />
 
+<div class="grid md:grid-cols-3 gap-3">
+  <div class="flex flex-col w-full p-9 gap-6 border rounded-lg">
+    <h3 class="font-bold text-lg">Friend Membership</h3>
+    <h1 class="text-4xl font-extrabold">$50 <span class="text-sm text-zinc-500 font-medium">/ year</span></h1>
+    <span class="text-sm text-zinc-500"><strong class="text-xl">$25</strong> / additional (1 allowed)</span>
+    <span class="text-sm">Designed for individuals and couples without children.</span>
+    <ul class="text-zinc-500 text-sm grid gap-2 list-disc">
+      <li>1 adult included in price</li>
+      <li>All members must live in the same address.</li>
+      <li>No discounts on Birthday Parties.</li>
+    </ul>
+  </div>
+  <div class="flex flex-col w-full p-9 gap-6 border border-blue-900 bg-blue-50 rounded-lg">
+    <h3 class="font-extrabold text-2xl text-blue-900">Family Membership</h3>
+    <h1 class="text-4xl font-extrabold">$125 <span class="text-sm text-zinc-500 font-medium">/ year</span></h1>
+    <span class="text-sm text-zinc-500"><strong class="text-xl">$25</strong> / additional (1 allowed)</span>
+    <span class="text-sm">Designed for families of 5 or less.</span>
+    <ul class="text-zinc-500 text-sm grid gap-2 list-disc">
+      <li>2 adults and 2 children included in price.</li>
+      <li>All members must live in the same address.</li>
+      <li>50% OFF all Birthday Party packages.</li>
+      <li><a class="underline" href="#">ASTC</a> benefits.</li>
+    </ul>
+  </div>
+  <div class="flex flex-col w-full p-9 gap-6 border rounded-lg">
+    <h3 class="font-bold text-lg">Sponsor Membership</h3>
+    <h1 class="text-4xl font-extrabold">$150 <span class="text-sm text-zinc-500 font-medium">/ year</span></h1>
+    <span class="text-sm text-zinc-500"><strong class="text-xl">$25</strong> / additional (2 allowed)</span>
+    <span class="text-sm">Designed for larger families with children.</span>
+    <ul class="text-zinc-500 text-sm grid gap-2 list-disc">
+      <li>2 adults and 4 children included in price.</li>
+      <li>Members may be extended family members such as in-laws.</li>
+      <li>All members not required to live in the same address.</li>
+      <li>50% OFF all Birthday Party packages.</li>
+      <li><a class="underline" href="#">ASTC</a> benefits.</li>
+    </ul>
+  </div>
+</div>
+
   <div class="flex flex-col lg:flex-row justify-center gap-3">
     <a href="#school" class="w-full lg:w-96 border border-zinc-300 rounded text-center shadow">
       <img src="https://www.starsatnight.org/sites/sciencetheater/assets/File/schoolgroups.png" class="rounded-t w-full" />

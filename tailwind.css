@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+img#membership-card {
+  @apply w-full lg:w-1/3;
+}
+
 h1.title {
   @apply text-5xl md:text-7xl font-bold text-center text-white p-4;
 }
@@ -32,40 +36,6 @@ h5.subtitle {
 
 .btn-basic {
   @apply bg-transparent text-white border-white hover:bg-white hover:text-black;
-}
-
-.astral-events-page {
-  @apply grid gap-2;
-}
-
-.astral-events-page > h3 {
-  @apply font-semibold text-lg;
-}
-
-.astral-events-container {
-  @apply flex gap-1 -mr-2 overflow-x-auto;
-}
-
-.astral-event-card {
-  @apply w-40 h-60 flex-shrink-0 cursor-pointer;
-}
-
-.astral-event-card > img {
-  height: 100%;
-  width: 100%;
-  @apply rounded-xl;
-}
-
-.astral-event-card-body {
-  @apply hidden;
-}
-
-.astral-event-back-button {
-  @apply px-3 py-2 rounded text-white font-semibold;
-}
-
-.astral-event-details-page {
-  @apply flex flex-col gap-4 p-4;
 }
 
 form > span,

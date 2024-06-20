@@ -41,7 +41,7 @@
             <span class="text-sm">No shows found.</span>
           <cfelse>
           <cfloop item="show" array="#shows#">
-            <a href="/show?id=#show.id#" class="hover:scale-105 border flex-none rounded-lg w-64 h-96 mb-3" style="background-image:url('#replace(show.cover, "http", "https")#') !important;background-size:cover !important">
+            <a href="/show?id=#show.id#" class="hover:scale-105 border flex-none rounded-lg w-64 h-96 mb-3 bg-cover bg-center" style="background-image:url('/sites/#$.siteConfig('siteId')#/assets/Image/covers/#show.id#.jpg')">
               <div class="flex flex-col justify-end gap-1 h-full bg-gradient-to-b from-transparent from-35% to-black rounded-b to-90% p-3">
                 <div class="flex items-center gap-1">
                   <span class="px-2 py-1 bg-black text-white font-medium border border-black rounded-lg flex gap-1 items-center text-xs">

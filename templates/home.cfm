@@ -2,6 +2,8 @@
   <!DOCTYPE html>
   <html lang="en">
     <cfinclude template="includes/html_head.cfm" />
+    <meta name="description" content="#esapiEncode('html_attr', $.content('metaDesc'))#">
+    <meta name="keywords" content="#esapiEncode('html_attr', $.content('metaKeywords'))#">
     <body class="bg-white dark:bg-black text-black flex flex-col items-center">
       <div class="w-full h-screen bg-[url('/themes/MaybornTailwind3/images/galaxy-3608029_1920.jpg')] bg-cover z-10"></div>
       <div class="w-full h-screen bg-cover absolute bg-gradient-to-b from-black/90 from-15% to-black/30 z-20"></div>

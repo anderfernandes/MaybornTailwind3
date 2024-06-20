@@ -25,6 +25,33 @@
           Event ###data.id# - #esapiEncode('html', $.siteConfig('site'))#
         </cfif>
       </title>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "#data.show.name#",
+          "startDate": "#data.start#",
+          "endDate": "#data.end#",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Mayborn Science Theater",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "On the Campus of Central Texas College, Bldg No. 267, Bell Tower Drive, 6200 W Central Texas Expy",
+              "addressLocality": "Killeen",
+              "postalCode": "76549",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          },
+          "image": [
+            "https://#$.siteConfig('domain')#/sites/#$.siteConfig('siteId')#/assets/Image/covers/#data.show.id#.jpg",
+          ],
+          "description": "#data.show.description#",
+        }
+    </script>
     </head>
     <body class="flex flex-col items-center bg-zinc-50">
       <main class="w-full min-h-screen z-30 w-full xl:max-w-screen-2xl p-6 flex flex-col gap-3 pt-16 bg-zinc-50">
@@ -35,12 +62,14 @@
             <path fill="currentColor" d="M20,10V14H11L14.5,17.5L12.08,19.92L4.16,12L12.08,4.08L14.5,6.5L11,10H20Z"></path>
           </svg>
         </a>
+        <br />
         #$.dspBody(
           body=$.content('body'), 
           pageTitle='', 
           crumbList=false, 
           showMetaImage=false
         )#
+        <br />
         <cfif isNull(data) OR !isDefined("url.id")>
           <div class="bg-red-100 text-sm text-red-700 text-base rounded-lg p-3 font-medium flex justify-center items-center gap-2">
             <svg viewBox="0 0 24 24" class="h-5 w-5">
@@ -58,7 +87,7 @@
               </div>
             </cfif>
             <div class="flex flex-col items-center md:items-start md:flex-row gap-3 w-full">
-              <div class="border flex-none rounded-lg w-64 h-96 mb-3" style="background-image:url('#replace(data.show.cover, "http", "https")#') !important;background-size:cover !important"></div>
+              <div class="border flex-none rounded-lg w-64 h-96 mb-3 bg-cover bg-center" style="background-image:url('/sites/#$.siteConfig('siteId')#/assets/Image/covers/#data.show.id#.jpg')"></div>
               <div class="flex flex-col gap-2 text-center lg:text-left w-full">
                 <h5 class="text-sm text-zinc-400">Event ###data.id#</h5>
                 <h1 class="font-extrabold text-3xl">#data.show.name#</h1>
